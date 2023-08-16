@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,500&display=swap');
+
+body {
+  width: 100%;
+  background: linear-gradient(-45deg, rgba(228,30,47,0.7) 0%, rgba(255, 238, 56, 1) 120%);
+  background-size: cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.logo img {
+    max-height: 40px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; 
+  overflow-x: hidden;
+}
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  position: relative;
+  font-size: 90px;
+  color: white; 
+  margin-top: -10%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+    margin-top: 20px; /* Ajusta el margen superior para dispositivos móviles */
+  }
+
+  /* Agrega otros cambios específicos para el h1 en dispositivos móviles aquí */
+}
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white; 
+}
+h7 {
+  position: relative;
+  font-size: 35px;
+  color: #0ef;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  background-color: rgba(255,233,26,0.0); /*Con 0.0 se controla la transparencia del back */
+  cursor: pointer;
+  border: none;
+  color: black;
+  position: relative;
+  opacity: 0.8;
+  margin-right: 5px;
+}
+.btn-i {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+}
+.btn-y {
+  background-color: rgba(255,233,26,1);
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(255, 233, 26, 1);
+}
+.btn:hover {
+  background-color: rgba(255,233,26,1);
+  opacity: 0.8;
+}
+section .animate {
+  opacity: 0;
+  transition: 0.7s;
+  filter: blur(5px);
+}
+section.show-animate .animate {
+    opacity: 1;
+    filter: blur(0);
+}
+section .animate img {
+  opacity: 0;
+  transition: 0.7s;
+  filter: blur(5px);
+}
+section.show-animate .animate img{
+    opacity: 1;
+    filter: blur(0);
+}
+#hero .animate {
+  transform: translateX(-100%);
+}
+#hero.show-animate .animate {
+  transform: translateX(0);
+}
+/* Estilo inicial para el elemento */
+.sec-2 .animate {
+  transform: translateY(150%);
+}
+
+/* Estilo durante la animación */
+.sec-2.show-animate .animate {
+  transform: translateY(0);
+}
+.sec-3 .animate {
+  transform: scale(.7);
+}
+.sec-3.show-animate .animate {
+  transform: scale(1);
+}
+.sec-4 .showRight-animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #1f242d;
+  transition: 1s;
+  transition-delay: calc(.2s * var(--i));
+}
+.sec-4.show-animate .showRight-animate {
+  width: 0;
+}
+.sec-2 {
+  background-image: url("img/pc2.jpg");
+  background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-size: 100% 100%;
+}
+.sec-2 h1 {
+  text-shadow: 2px -2px 8px black;
+  color: #f7ce00;
+}
+.sec-2 h2 {
+  text-shadow: 2px -2px 4px black;
+  color: ;
+}
+.sec-3 h1 {
+  color: white;
+  /*-webkit-text-stroke: 2px #0d0d0d; /* Borde alrededor de las letras (Webkit) */
+  /*text-stroke: 2px #0d0d0d; /* Borde alrededor de las letras */
+  text-shadow: 3px -3px 3px black;
+  z-index: 999;
+}
+.sec-3 h7 {
+  color: #ff0;
+  /*-webkit-text-stroke: 1px #0d0d0d; /* Borde alrededor de las letras (Webkit) */
+  /*text-stroke: 1px #0d0d0d; /* Borde alrededor de las letras */
+  text-shadow: 3px -3px 3px black;
+  z-index: 999;
+  right: 10px;
+}
+.sec-4 h7 {
+  color: #0f0;
+}
+.sec-3 {
+  justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+  align-items: center; /* Centra verticalmente el contenido */
+  text-align: center;
+}
+
+.pres-img {
+  box-shadow: 3px -3px 4px black;
+  border-radius: 5px;
+  height: 20%;
+  margin-top: -100px;
+}
+
+.sec-5 .images img {
+  max-width: 400px;
+  height: 300px;
+  margin: 0 30px;
+  transform: translateX(-100%);
+  transition-delay: calc(.2s * var(--i));
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px black;
+}
+
+.sec-5.show-animate .images img {
+  transform: translateX(0);
+}
+.bg-medio {
+  background-color: #989EA4;
+}
+.icon-margen {
+  margin-left: 10px;
+}
+.ancho-f {
+  witdh: 100%
+}
+footer .info-legales-link a {
+    text-decoration: none;
+}
+.whatsapp img {
+    position: fixed;
+    bottom: 120px;
+    right: 32px;
+    z-index: 100;
+    width: 70px;
+    height: 70px;
+}
+.whatsapp img:hover { 
+    width: 80px;
+    height: 80px; 
+}
+@media (max-width: 767px) {
+  .whatsapp {
+    bottom: 80px;
+    right: 16px;
+  }
+  .whatsapp img: { 
+    width: 40px;
+    height: 40px; 
+}
+  .whatsapp img:hover { 
+    width: 50px;
+    height: 50px; 
+}
+
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  /*background: linear-gradient(45deg, rgba(255, 238, 56, 0.9) 0%, rgba(116, 15, 214, 0.9) 120%), url("../img/hero-bg.jpg") center center no-repeat;*/
+  background-size: cover;
+}
+
+#hero .container, #hero .container-fluid {
+  padding-top: 84px;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #fff;
+  text-shadow: -2px 2px 3px black;
+}
+.btn-registro {
+  color: rgba(255, 255, 255, 1);
+  margin: 10px 0 0 0;
+  font-size: 30px;
+  text-shadow: -2px 2px 3px black;
+  border: none;
+}
+.btn-registro:hover {
+  background-color: rgba(255,233,26,0.5);
+  border-radius: 5px;
+  padding: 3px 3px;
+}
+#hero h2 {
+  color: rgba(255, 255, 255, 1);
+  margin: 10px 0 0 0;
+  font-size: 30px;
+  text-shadow: -2px 2px 3px black;
+}
+#hero h3 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 25px;
+  text-shadow: -2px 2px 3px black;
+}
+
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #fff;
+  color: #5846f9;
+}
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (min-width: 1200px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  #hero {
+    text-align: center;
+  }
+  #hero .container, #hero .container-fluid {
+    padding-top: 68px;
+  }
+  #hero .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
+  #hero .hero-img {
+    text-align: center;
+  }
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  #hero .hero-img img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px), (max-height: 600px) {
+  #hero {
+    height: auto;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
